@@ -1,0 +1,23 @@
+<div class="container-fluid" >
+    
+    <h4>Carro de Compras</h4>
+
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>ID</th>
+                <th>Producto</th>
+                <th>Precio</th>
+                <th>Acción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let carro of productosCarro; index as i">
+                <td>{{carro.id}}</td>
+                <td>{{carro.producto}}</td>
+                <td>{{carro.precio}}</td>
+                <td><button class="btn btn-danger" (click)="onClickEliminar(i)">Eliminar del carro</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

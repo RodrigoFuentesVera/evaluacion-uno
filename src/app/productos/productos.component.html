@@ -1,0 +1,25 @@
+<div class="container-fluid">
+    
+    <h4>Productos Disponibles</h4>
+
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>ID</th>
+                <th>Producto</th>
+                <th>Precio</th>
+                <th>Acción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let prod of productos">
+                <td>{{prod.id}}</td>
+                <td>{{prod.producto}}</td>
+                <td>{{prod.precio}}</td>
+                <td><button class="btn btn-success" (click)="onCLickAgregar(prod.id, prod.producto,prod.precio)">Agregar al carro</button></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    
+</div>
